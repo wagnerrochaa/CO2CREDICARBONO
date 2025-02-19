@@ -1,4 +1,3 @@
-# Atualizando o arquivo index.html com imagens e melhor design
 html_with_images = """<!DOCTYPE html>
 <html lang="pt-br">
 <head>
