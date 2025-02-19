@@ -1,54 +1,77 @@
-<header>
+# Atualizando o arquivo index.html com imagens e melhor design
+html_with_images = """<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2CrediCarbono - Créditos de Carbono</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; margin: 0; padding: 0; background-color: #f5f5f5; color: #333; }
+        .header { background-image: url('https://source.unsplash.com/1600x900/?forest,carbon'); background-size: cover; padding: 50px 20px; color: white; }
+        h1 { margin: 0; font-size: 2.5em; }
+        .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin-top: -30px; position: relative; }
+        .button { display: inline-block; padding: 10px 20px; margin: 20px; color: white; background-color: green; text-decoration: none; border-radius: 5px; }
+        .section { text-align: left; margin-top: 20px; padding: 20px; display: flex; align-items: center; }
+        .section img { width: 80px; margin-right: 20px; }
+        .section h2 { color: green; margin: 0; }
+        .footer { background: #333; color: white; padding: 20px; margin-top: 30px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>CO2CrediCarbono</h1>
+        <p>Transforme suas emissões em impacto positivo!</p>
+        <a href="#" class="button">Saiba Mais</a>
+    </div>
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+    <div class="container">
+        <div class="section">
+            <img src="https://cdn-icons-png.flaticon.com/512/2330/2330521.png" alt="Missão">
+            <div>
+                <h2>🌱 Nossa Missão</h2>
+                <p>Facilitar a compensação de carbono utilizando tecnologia blockchain, garantindo transparência e acessibilidade para indivíduos e empresas.</p>
+            </div>
+        </div>
 
-# GitHub Pages
+        <div class="section">
+            <img src="https://cdn-icons-png.flaticon.com/512/2906/2906274.png" alt="Token CARBO">
+            <div>
+                <h2>🔹 O que é o Token CARBO?</h2>
+                <p>O Token <b>CARBO</b> representa créditos de carbono certificados, permitindo que empresas e indivíduos compensem suas emissões de CO₂.</p>
+            </div>
+        </div>
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+        <div class="section">
+            <img src="https://cdn-icons-png.flaticon.com/512/1086/1086477.png" alt="Como Comprar">
+            <div>
+                <h2>💰 Como Comprar?</h2>
+                <p>1️⃣ Criar uma carteira MetaMask ou Trust Wallet</p>
+                <p>2️⃣ Adquirir USDT ou BNB</p>
+                <p>3️⃣ Trocar por <b>CARBO</b> na nossa plataforma</p>
+            </div>
+        </div>
 
-</header>
+        <div class="section">
+            <img src="https://cdn-icons-png.flaticon.com/512/1828/1828640.png" alt="Certificação">
+            <div>
+                <h2>🔍 Transparência e Certificação</h2>
+                <p>Nosso sistema garante que todos os créditos de carbono sejam verificados por instituições como <b>VERRA</b> e <b>Gold Standard</b>, e registrados na blockchain.</p>
+            </div>
+        </div>
+    </div>
 
-<!--
-  <<< Author notes: Step 1 >>>
-  Choose 3-5 steps for your course.
-  The first step is always the hardest, so pick something easy!
-  Link to docs.github.com for further explanations.
-  Encourage users to open new tabs for steps!
--->
+    <div class="footer">
+        <p>📩 Contato: contato@co2credicarbono.com.br</p>
+        <p>🌍 Redes sociais: LinkedIn | Instagram | Twitter</p>
+    </div>
+</body>
+</html>
+"""
 
-## Step 1: Enable GitHub Pages
+# Criar o arquivo atualizado index.html com imagens
+file_with_images_path = "/mnt/data/index.html"
 
-_Welcome to GitHub Pages and Jekyll :tada:!_
+with open(file_with_images_path, "w", encoding="utf-8") as file:
+    file.write(html_with_images)
 
-The first step is to enable GitHub Pages on this [repository](https://docs.github.com/en/get-started/quickstart/github-glossary#repository). When you enable GitHub Pages on a repository, GitHub takes the content that's on the main branch and publishes a website based on its contents.
-
-### :keyboard: Activity: Enable GitHub Pages
-
-1. Open a new browser tab, and work on the steps in your second tab while you read the instructions in this tab.
-1. Under your repository name, click **Settings**.
-1. Click **Pages** in the **Code and automation** section.
-1. Ensure "Deploy from a branch" is selected from the **Source** drop-down menu, and then select `main` from the **Branch** drop-down menu.
-1. Click the **Save** button.
-1. Wait about _one minute_ then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
-   > Turning on GitHub Pages creates a deployment of your repository. GitHub Actions may take up to a minute to respond while waiting for the deployment. Future steps will be about 20 seconds; this step is slower.
-   > **Note**: In the **Pages** of **Settings**, the **Visit site** button will appear at the top. Click the button to see your GitHub Pages site.
-
-<footer>
-
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
-
----
-
-Get help: [Post in our discussion board](https://github.com/orgs/skills/discussions/categories/github-pages) &bull; [Review the GitHub status page](https://www.githubstatus.com/)
-
-&copy; 2023 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
-
-</footer>
+file_with_images_path
